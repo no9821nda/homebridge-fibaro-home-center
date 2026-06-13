@@ -360,10 +360,6 @@ export class SetFunctions {
       return;
     }
 
-    if (value === Characteristic.SecuritySystemTargetState.DISARM) {
-      value = Characteristic.SecuritySystemCurrentState.DISARMED;
-    }
-
     await this.scene(sceneID);
   }
 
