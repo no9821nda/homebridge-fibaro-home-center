@@ -2,10 +2,12 @@
 
 name: Lint and compile
 
-# By default, the workflow only runs when a pull_request's
-# activity type is opened, synchronize, or reopened.
-# See https://docs.github.com/en/actions/learn-github-actions/events-that-trigger-workflows#pull_request
-on: pull_request
+# Runs on pull requests, pushes to main, and manual dispatch.
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
 
 jobs:
   lint:
