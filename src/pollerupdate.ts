@@ -184,7 +184,8 @@ export class Poller {
 
   private logValueChange(subscription, characteristic) {
     if (this.platform.config.logsLevel >= 1) {
-      let val1 = '', val2 = '';
+      let val1: string;
+      let val2 = '';
       switch (characteristic.displayName) {
         case 'Current Temperature':
           val1 = characteristic.value.toFixed(1);
